@@ -225,7 +225,7 @@ let tie = "It's a tie!";
 
 
 function game() {
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 6; i++) {
        if(i === 0 && roundOne === winOne) {
            console.log("You Win Round One!");
        } else if(i === 0 && roundOne === loseOne) {
@@ -267,11 +267,17 @@ function game() {
        } else if(i === 4) {
             console.log("Invalid Response");
        } else {
-           console.log('error')
+           console.log()
        }
    
     }
 }
+
+
+
+
+
+
 
 
 
@@ -283,4 +289,14 @@ function game() {
 // 1: new instance of playRound
 // 2: new instance of playRound
 
-//need function playRound to stop storing it's value
+//I now have a loop that displays 5 different round functions each with a different random variable
+//from the computer
+
+//I need a way to display if you have more wins or losses at the end of the loop
+
+//if win 3 || 4 || 5 you win
+//if win 2 && tie 2 || 3 you win
+//if win 1 && tie 4 you win
+//if win 2 && tie 1 you tie
+//if win 1 && tie 3 you tie
+//all else: you lose
