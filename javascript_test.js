@@ -1,3 +1,9 @@
+function myFunc() {
+    let playerValue = document.getElementById("uniqueID").value;
+    console.log(playerValue);
+    
+
+
 function computerPlay() {
 
     function rng() {
@@ -88,211 +94,229 @@ function computerPlayFive() {
     }
 }
 
-let playerSelection = prompt("Please type rock, paper, or scissors in the box below.");
 let computerSelection = computerPlay();
 let computerSelectionTwo = computerPlayTwo();
 let computerSelectionThree = computerPlayThree();
 let computerSelectionFour = computerPlayFour();
 let computerSelectionFive = computerPlayFive();
 
-function playRound(playerSelection, computerSelection) {
-    if ((playerSelection.toLowerCase() === "rock") && computerSelection === "scissors") {
+function playRound(playerValue, computerSelection) {
+    if ((playerValue.toLowerCase() === "rock") && computerSelection === "scissors") {
         return 1
-    } else if ((playerSelection.toLowerCase()) === "paper" && computerSelection === "rock") {
+    } else if ((playerValue.toLowerCase()) === "paper" && computerSelection === "rock") {
         return 1
-    } else if ((playerSelection.toLowerCase()) === "scissors" && computerSelection === "paper") {
+    } else if ((playerValue.toLowerCase()) === "scissors" && computerSelection === "paper") {
         return 1
-    } else if (computerSelection === "rock" && (playerSelection.toLowerCase() === "scissors")) {
+    } else if (computerSelection === "rock" && (playerValue.toLowerCase() === "scissors")) {
         return (-1)
-    } else if (computerSelection === "paper" && (playerSelection.toLowerCase() === "rock")) {
+    } else if (computerSelection === "paper" && (playerValue.toLowerCase() === "rock")) {
         return (-1)
-    } else if (computerSelection === "scissors" && (playerSelection.toLowerCase() === "paper")) {
+    } else if (computerSelection === "scissors" && (playerValue.toLowerCase() === "paper")) {
         return (-1)
-    } else if (computerSelection === (playerSelection.toLowerCase())) {
+    } else if (computerSelection === (playerValue.toLowerCase())) {
         return 0
     } else {
         return "Invalid Response"
     }
 }
 
-function playRoundTwo(playerSelection, computerSelectionTwo) {
-    if ((playerSelection.toLowerCase() === "rock") && computerSelectionTwo === "scissors") {
+function playRoundTwo(playerValue, computerSelectionTwo) {
+    if ((playerValue.toLowerCase() === "rock") && computerSelectionTwo === "scissors") {
         return 1
-    } else if ((playerSelection.toLowerCase()) === "paper" && computerSelectionTwo === "rock") {
+    } else if ((playerValue.toLowerCase()) === "paper" && computerSelectionTwo === "rock") {
         return 1
-    } else if ((playerSelection.toLowerCase()) === "scissors" && computerSelectionTwo === "paper") {
+    } else if ((playerValue.toLowerCase()) === "scissors" && computerSelectionTwo === "paper") {
         return 1
-    } else if (computerSelectionTwo === "rock" && (playerSelection.toLowerCase() === "scissors")) {
+    } else if (computerSelectionTwo === "rock" && (playerValue.toLowerCase() === "scissors")) {
         return (-1)
-    } else if (computerSelectionTwo === "paper" && (playerSelection.toLowerCase() === "rock")) {
+    } else if (computerSelectionTwo === "paper" && (playerValue.toLowerCase() === "rock")) {
         return (-1)
-    } else if (computerSelectionTwo === "scissors" && (playerSelection.toLowerCase() === "paper")) {
+    } else if (computerSelectionTwo === "scissors" && (playerValue.toLowerCase() === "paper")) {
         return (-1)
-    } else if (computerSelectionTwo === (playerSelection.toLowerCase())) {
+    } else if (computerSelectionTwo === (playerValue.toLowerCase())) {
         return 0
     } else {
         return "Invalid Response"
     }
 }
 
-function playRoundThree(playerSelection, computerSelectionThree) {
-    if ((playerSelection.toLowerCase() === "rock") && computerSelectionThree === "scissors") {
+function playRoundThree(playerValue, computerSelectionThree) {
+    if ((playerValue.toLowerCase() === "rock") && computerSelectionThree === "scissors") {
         return 1
-    } else if ((playerSelection.toLowerCase()) === "paper" && computerSelectionThree === "rock") {
+    } else if ((playerValue.toLowerCase()) === "paper" && computerSelectionThree === "rock") {
         return 1
-    } else if ((playerSelection.toLowerCase()) === "scissors" && computerSelectionThree === "paper") {
+    } else if ((playerValue.toLowerCase()) === "scissors" && computerSelectionThree === "paper") {
         return 1
-    } else if (computerSelectionThree === "rock" && (playerSelection.toLowerCase() === "scissors")) {
+    } else if (computerSelectionThree === "rock" && (playerValue.toLowerCase() === "scissors")) {
         return (-1)
-    } else if (computerSelectionThree === "paper" && (playerSelection.toLowerCase() === "rock")) {
+    } else if (computerSelectionThree === "paper" && (playerValue.toLowerCase() === "rock")) {
         return (-1)
-    } else if (computerSelectionThree === "scissors" && (playerSelection.toLowerCase() === "paper")) {
+    } else if (computerSelectionThree === "scissors" && (playerValue.toLowerCase() === "paper")) {
         return (-1)
-    } else if (computerSelectionThree === (playerSelection.toLowerCase())) {
+    } else if (computerSelectionThree === (playerValue.toLowerCase())) {
         return 0
     } else {
         return "Invalid Response"
     }
 }
 
-function playRoundFour(playerSelection, computerSelectionFour) {
-    if ((playerSelection.toLowerCase() === "rock") && computerSelectionFour === "scissors") {
+function playRoundFour(playerValue, computerSelectionFour) {
+    if ((playerValue.toLowerCase() === "rock") && computerSelectionFour === "scissors") {
         return 1
-    } else if ((playerSelection.toLowerCase()) === "paper" && computerSelectionFour === "rock") {
+    } else if ((playerValue.toLowerCase()) === "paper" && computerSelectionFour === "rock") {
         return 1
-    } else if ((playerSelection.toLowerCase()) === "scissors" && computerSelectionFour === "paper") {
+    } else if ((playerValue.toLowerCase()) === "scissors" && computerSelectionFour === "paper") {
         return 1
-    } else if (computerSelectionFour === "rock" && (playerSelection.toLowerCase() === "scissors")) {
+    } else if (computerSelectionFour === "rock" && (playerValue.toLowerCase() === "scissors")) {
         return (-1)
-    } else if (computerSelectionFour === "paper" && (playerSelection.toLowerCase() === "rock")) {
+    } else if (computerSelectionFour === "paper" && (playerValue.toLowerCase() === "rock")) {
         return (-1)
-    } else if (computerSelectionFour === "scissors" && (playerSelection.toLowerCase() === "paper")) {
+    } else if (computerSelectionFour === "scissors" && (playerValue.toLowerCase() === "paper")) {
         return (-1)
-    } else if (computerSelectionFour === (playerSelection.toLowerCase())) {
+    } else if (computerSelectionFour === (playerValue.toLowerCase())) {
         return 0
     } else {
         return "Invalid Response"
     }
 }
 
-function playRoundFive(playerSelection, computerSelectionFive) {
-    if ((playerSelection.toLowerCase() === "rock") && computerSelectionFive === "scissors") {
+function playRoundFive(playerValue, computerSelectionFive) {
+    if ((playerValue.toLowerCase() === "rock") && computerSelectionFive === "scissors") {
         return 1
-    } else if ((playerSelection.toLowerCase()) === "paper" && computerSelectionFive === "rock") {
+    } else if ((playerValue.toLowerCase()) === "paper" && computerSelectionFive === "rock") {
         return 1
-    } else if ((playerSelection.toLowerCase()) === "scissors" && computerSelectionFive === "paper") {
+    } else if ((playerValue.toLowerCase()) === "scissors" && computerSelectionFive === "paper") {
         return 1
-    } else if (computerSelectionFive === "rock" && (playerSelection.toLowerCase() === "scissors")) {
+    } else if (computerSelectionFive === "rock" && (playerValue.toLowerCase() === "scissors")) {
         return (-1)
-    } else if (computerSelectionFive === "paper" && (playerSelection.toLowerCase() === "rock")) {
+    } else if (computerSelectionFive === "paper" && (playerValue.toLowerCase() === "rock")) {
         return (-1)
-    } else if (computerSelectionFive === "scissors" && (playerSelection.toLowerCase() === "paper")) {
+    } else if (computerSelectionFive === "scissors" && (playerValue.toLowerCase() === "paper")) {
         return (-1)
-    } else if (computerSelectionFive === (playerSelection.toLowerCase())) {
+    } else if (computerSelectionFive === (playerValue.toLowerCase())) {
         return 0
     } else {
         return "Invalid Response"
     }
 }
+
+let lineOne = document.querySelector(".lineOne");
+let lineTwo = document.querySelector(".lineTwo");
+let lineThree = document.querySelector(".lineThree");
+let lineFour = document.querySelector(".lineFour");
+let lineFive = document.querySelector(".lineFive");
+let lineSix = document.querySelector(".lineSix");
+
 
 function game() {
     for (let i = 0; i < 6; i++) {
         //First Round
-        if((i === 0) && (playRound(playerSelection, computerSelection) === 1) && (playerSelection.toLowerCase() === "rock")) {
-            console.log(`You Win! ${playerSelection} beats ${computerSelection}`)
-        } else if((i === 0) && (playRound(playerSelection, computerSelection) === 1) && (playerSelection.toLowerCase() === "paper")) {
-            console.log(`You Win! ${playerSelection} beats ${computerSelection}`)
-        } else if((i === 0) && (playRound(playerSelection, computerSelection) === 1) && (playerSelection.toLowerCase() === "scissors")) {
-            console.log(`You Win! ${playerSelection} beats ${computerSelection}`)
-        } else if((i === 0) && (playRound(playerSelection, computerSelection) === (-1)) && (playerSelection.toLowerCase() === "rock")) {
-            console.log(`You Lose! ${playerSelection} is engulfed by ${computerSelection}`)
-        } else if((i === 0) && (playRound(playerSelection, computerSelection) === (-1)) && (playerSelection.toLowerCase() === "paper")) {
-            console.log(`You Lose! ${playerSelection} is sliced apart by ${computerSelection}`)
-        } else if((i === 0) && (playRound(playerSelection, computerSelection) === (-1)) && (playerSelection.toLowerCase() === "scissors")) {
-            console.log(`You Lose! ${playerSelection} are crushed by ${computerSelection}`)
-        } else if((i === 0) && (playRound(playerSelection, computerSelection) === 0) && (playerSelection.toLowerCase() === computerSelection)) {
-            console.log(`You Tie!`);
+        if((i === 0) && (playRound(playerValue, computerSelection) === 1) && (playerValue.toLowerCase() === "rock")) {
+            lineOne.innerText = (`You Win! ${playerValue} beats ${computerSelection}`)
+        } else if((i === 0) && (playRound(playerValue, computerSelection) === 1) && (playerValue.toLowerCase() === "paper")) {
+            lineOne.innerText = (`You Win! ${playerValue} beats ${computerSelection}`)
+        } else if((i === 0) && (playRound(playerValue, computerSelection) === 1) && (playerValue.toLowerCase() === "scissors")) {
+            lineOne.innerText = (`You Win! ${playerValue} beats ${computerSelection}`)
+        } else if((i === 0) && (playRound(playerValue, computerSelection) === (-1)) && (playerValue.toLowerCase() === "rock")) {
+            lineOne.innerText = (`You Lose! ${playerValue} is engulfed by ${computerSelection}`)
+        } else if((i === 0) && (playRound(playerValue, computerSelection) === (-1)) && (playerValue.toLowerCase() === "paper")) {
+            lineOne.innerText = (`You Lose! ${playerValue} is sliced apart by ${computerSelection}`)
+        } else if((i === 0) && (playRound(playerValue, computerSelection) === (-1)) && (playerValue.toLowerCase() === "scissors")) {
+            lineOne.innerText = (`You Lose! ${playerValue} are crushed by ${computerSelection}`)
+        } else if((i === 0) && (playRound(playerValue, computerSelection) === 0) && (playerValue.toLowerCase() === computerSelection)) {
+            lineOne.innerText = (`You Tie!`);
         //Second Round
-        } else if((i === 1) && (playRound(playerSelection, computerSelectionTwo) === 1) && (playerSelection.toLowerCase() === "rock")) {
-            console.log(`You Win! ${playerSelection} beats ${computerSelectionTwo}`)
-        } else if((i === 1) && (playRound(playerSelection, computerSelectionTwo) === 1) && (playerSelection.toLowerCase() === "paper")) {
-            console.log(`You Win! ${playerSelection} beats ${computerSelectionTwo}`)
-        } else if((i === 1) && (playRound(playerSelection, computerSelectionTwo) === 1) && (playerSelection.toLowerCase() === "scissors")) {
-            console.log(`You Win! ${playerSelection} beats ${computerSelectionTwo}`)
-        } else if((i === 1) && (playRound(playerSelection, computerSelectionTwo) === (-1)) && (playerSelection.toLowerCase() === "rock")) {
-            console.log(`You Lose! ${playerSelection} is engulfed by ${computerSelectionTwo}`)
-        } else if((i === 1) && (playRound(playerSelection, computerSelectionTwo) === (-1)) && (playerSelection.toLowerCase() === "paper")) {
-            console.log(`You Lose! ${playerSelection} is sliced apart by ${computerSelectionTwo}`)
-        } else if((i === 1) && (playRound(playerSelection, computerSelectionTwo) === (-1)) && (playerSelection.toLowerCase() === "scissors")) {
-            console.log(`You Lose! ${playerSelection} are crushed by ${computerSelectionTwo}`)
-        } else if((i === 1) && (playRound(playerSelection, computerSelectionTwo) === 0) && (playerSelection.toLowerCase() === computerSelectionTwo)) {
-            console.log(`You Tie!`);
+        } else if((i === 1) && (playRound(playerValue, computerSelectionTwo) === 1) && (playerValue.toLowerCase() === "rock")) {
+            lineTwo.innerText = (`You Win! ${playerValue} beats ${computerSelectionTwo}`)
+        } else if((i === 1) && (playRound(playerValue, computerSelectionTwo) === 1) && (playerValue.toLowerCase() === "paper")) {
+            lineTwo.innerText = (`You Win! ${playerValue} beats ${computerSelectionTwo}`)
+        } else if((i === 1) && (playRound(playerValue, computerSelectionTwo) === 1) && (playerValue.toLowerCase() === "scissors")) {
+            lineTwo.innerText = (`You Win! ${playerValue} beats ${computerSelectionTwo}`)
+        } else if((i === 1) && (playRound(playerValue, computerSelectionTwo) === (-1)) && (playerValue.toLowerCase() === "rock")) {
+            lineTwo.innerText = (`You Lose! ${playerValue} is engulfed by ${computerSelectionTwo}`)
+        } else if((i === 1) && (playRound(playerValue, computerSelectionTwo) === (-1)) && (playerValue.toLowerCase() === "paper")) {
+            lineTwo.innerText = (`You Lose! ${playerValue} is sliced apart by ${computerSelectionTwo}`)
+        } else if((i === 1) && (playRound(playerValue, computerSelectionTwo) === (-1)) && (playerValue.toLowerCase() === "scissors")) {
+            lineTwo.innerText = (`You Lose! ${playerValue} are crushed by ${computerSelectionTwo}`)
+        } else if((i === 1) && (playRound(playerValue, computerSelectionTwo) === 0) && (playerValue.toLowerCase() === computerSelectionTwo)) {
+            lineTwo.innerText = (`You Tie!`);
         //Third Round
-        } else if((i === 2) && (playRound(playerSelection, computerSelectionThree) === 1) && (playerSelection.toLowerCase() === "rock")) {
-            console.log(`You Win! ${playerSelection} beats ${computerSelectionThree}`)
-        } else if((i === 2) && (playRound(playerSelection, computerSelectionThree) === 1) && (playerSelection.toLowerCase() === "paper")) {
-            console.log(`You Win! ${playerSelection} beats ${computerSelectionThree}`)
-        } else if((i === 2) && (playRound(playerSelection, computerSelectionThree) === 1) && (playerSelection.toLowerCase() === "scissors")) {
-            console.log(`You Win! ${playerSelection} beats ${computerSelectionThree}`)
-        } else if((i === 2) && (playRound(playerSelection, computerSelectionThree) === (-1)) && (playerSelection.toLowerCase() === "rock")) {
-            console.log(`You Lose! ${playerSelection} is engulfed by ${computerSelectionThree}`)
-        } else if((i === 2) && (playRound(playerSelection, computerSelectionThree) === (-1)) && (playerSelection.toLowerCase() === "paper")) {
-            console.log(`You Lose! ${playerSelection} is sliced apart by ${computerSelectionThree}`)
-        } else if((i === 2) && (playRound(playerSelection, computerSelectionThree) === (-1)) && (playerSelection.toLowerCase() === "scissors")) {
-            console.log(`You Lose! ${playerSelection} are crushed by ${computerSelectionThree}`)
-        } else if((i === 2) && (playRound(playerSelection, computerSelectionThree) === 0) && (playerSelection.toLowerCase() === computerSelectionThree)) {
-            console.log(`You Tie!`);    
+        } else if((i === 2) && (playRound(playerValue, computerSelectionThree) === 1) && (playerValue.toLowerCase() === "rock")) {
+            lineThree.innerText = (`You Win! ${playerValue} beats ${computerSelectionThree}`)
+        } else if((i === 2) && (playRound(playerValue, computerSelectionThree) === 1) && (playerValue.toLowerCase() === "paper")) {
+            lineThree.innerText = (`You Win! ${playerValue} beats ${computerSelectionThree}`)
+        } else if((i === 2) && (playRound(playerValue, computerSelectionThree) === 1) && (playerValue.toLowerCase() === "scissors")) {
+            lineThree.innerText = (`You Win! ${playerValue} beats ${computerSelectionThree}`)
+        } else if((i === 2) && (playRound(playerValue, computerSelectionThree) === (-1)) && (playerValue.toLowerCase() === "rock")) {
+            lineThree.innerText = (`You Lose! ${playerValue} is engulfed by ${computerSelectionThree}`)
+        } else if((i === 2) && (playRound(playerValue, computerSelectionThree) === (-1)) && (playerValue.toLowerCase() === "paper")) {
+            lineThree.innerText = (`You Lose! ${playerValue} is sliced apart by ${computerSelectionThree}`)
+        } else if((i === 2) && (playRound(playerValue, computerSelectionThree) === (-1)) && (playerValue.toLowerCase() === "scissors")) {
+            lineThree.innerText = (`You Lose! ${playerValue} are crushed by ${computerSelectionThree}`)
+        } else if((i === 2) && (playRound(playerValue, computerSelectionThree) === 0) && (playerValue.toLowerCase() === computerSelectionThree)) {
+            lineThree.innerText = (`You Tie!`);    
         //Fourth Round
-        } else if((i === 3) && (playRound(playerSelection, computerSelectionFour) === 1) && (playerSelection.toLowerCase() === "rock")) {
-            console.log(`You Win! ${playerSelection} beats ${computerSelectionFour}`)
-        } else if((i === 3) && (playRound(playerSelection, computerSelectionFour) === 1) && (playerSelection.toLowerCase() === "paper")) {
-            console.log(`You Win! ${playerSelection} beats ${computerSelectionFour}`)
-        } else if((i === 3) && (playRound(playerSelection, computerSelectionFour) === 1) && (playerSelection.toLowerCase() === "scissors")) {
-            console.log(`You Win! ${playerSelection} beats ${computerSelectionFour}`)
-        } else if((i === 3) && (playRound(playerSelection, computerSelectionFour) === (-1)) && (playerSelection.toLowerCase() === "rock")) {
-            console.log(`You Lose! ${playerSelection} is engulfed by ${computerSelectionFour}`)
-        } else if((i === 3) && (playRound(playerSelection, computerSelectionFour) === (-1)) && (playerSelection.toLowerCase() === "paper")) {
-            console.log(`You Lose! ${playerSelection} is sliced apart by ${computerSelectionFour}`)
-        } else if((i === 3) && (playRound(playerSelection, computerSelectionFour) === (-1)) && (playerSelection.toLowerCase() === "scissors")) {
-            console.log(`You Lose! ${playerSelection} are crushed by ${computerSelectionFour}`)
-        } else if((i === 3) && (playRound(playerSelection, computerSelectionFour) === 0) && (playerSelection.toLowerCase() === computerSelectionFour)) {
-            console.log(`You Tie!`);   
+        } else if((i === 3) && (playRound(playerValue, computerSelectionFour) === 1) && (playerValue.toLowerCase() === "rock")) {
+            lineFour.innerText = (`You Win! ${playerValue} beats ${computerSelectionFour}`)
+        } else if((i === 3) && (playRound(playerValue, computerSelectionFour) === 1) && (playerValue.toLowerCase() === "paper")) {
+            lineFour.innerText = (`You Win! ${playerValue} beats ${computerSelectionFour}`)
+        } else if((i === 3) && (playRound(playerValue, computerSelectionFour) === 1) && (playerValue.toLowerCase() === "scissors")) {
+            lineFour.innerText = (`You Win! ${playerValue} beats ${computerSelectionFour}`)
+        } else if((i === 3) && (playRound(playerValue, computerSelectionFour) === (-1)) && (playerValue.toLowerCase() === "rock")) {
+            lineFour.innerText = (`You Lose! ${playerValue} is engulfed by ${computerSelectionFour}`)
+        } else if((i === 3) && (playRound(playerValue, computerSelectionFour) === (-1)) && (playerValue.toLowerCase() === "paper")) {
+            lineFour.innerText = (`You Lose! ${playerValue} is sliced apart by ${computerSelectionFour}`)
+        } else if((i === 3) && (playRound(playerValue, computerSelectionFour) === (-1)) && (playerValue.toLowerCase() === "scissors")) {
+            lineFour.innerText = (`You Lose! ${playerValue} are crushed by ${computerSelectionFour}`)
+        } else if((i === 3) && (playRound(playerValue, computerSelectionFour) === 0) && (playerValue.toLowerCase() === computerSelectionFour)) {
+            lineFour.innerText = (`You Tie!`);   
         //Fifth Round 
-        } else if((i === 4) && (playRound(playerSelection, computerSelectionFive) === 1) && (playerSelection.toLowerCase() === "rock")) {
-            console.log(`You Win! ${playerSelection} beats ${computerSelectionFive}`)
-        } else if((i === 4) && (playRound(playerSelection, computerSelectionFive) === 1) && (playerSelection.toLowerCase() === "paper")) {
-            console.log(`You Win! ${playerSelection} beats ${computerSelectionFive}`)
-        } else if((i === 4) && (playRound(playerSelection, computerSelectionFive) === 1) && (playerSelection.toLowerCase() === "scissors")) {
-            console.log(`You Win! ${playerSelection} beats ${computerSelectionFive}`)
-        } else if((i === 4) && (playRound(playerSelection, computerSelectionFive) === (-1)) && (playerSelection.toLowerCase() === "rock")) {
-            console.log(`You Lose! ${playerSelection} is engulfed by ${computerSelectionFive}`)
-        } else if((i === 4) && (playRound(playerSelection, computerSelectionFive) === (-1)) && (playerSelection.toLowerCase() === "paper")) {
-            console.log(`You Lose! ${playerSelection} is sliced apart by ${computerSelectionFive}`)
-        } else if((i === 4) && (playRound(playerSelection, computerSelectionFive) === (-1)) && (playerSelection.toLowerCase() === "scissors")) {
-            console.log(`You Lose! ${playerSelection} are crushed by ${computerSelectionFive}`)
-        } else if((i === 4) && (playRound(playerSelection, computerSelectionFive) === 0) && (playerSelection.toLowerCase() === computerSelectionFive)) {
-            console.log(`You Tie!`);      
+        } else if((i === 4) && (playRound(playerValue, computerSelectionFive) === 1) && (playerValue.toLowerCase() === "rock")) {
+            lineFive.innerText = (`You Win! ${playerValue} beats ${computerSelectionFive}`)
+        } else if((i === 4) && (playRound(playerValue, computerSelectionFive) === 1) && (playerValue.toLowerCase() === "paper")) {
+            lineFive.innerText =(`You Win! ${playerValue} beats ${computerSelectionFive}`)
+        } else if((i === 4) && (playRound(playerValue, computerSelectionFive) === 1) && (playerValue.toLowerCase() === "scissors")) {
+            lineFive.innerText =(`You Win! ${playerValue} beats ${computerSelectionFive}`)
+        } else if((i === 4) && (playRound(playerValue, computerSelectionFive) === (-1)) && (playerValue.toLowerCase() === "rock")) {
+            lineFive.innerText =(`You Lose! ${playerValue} is engulfed by ${computerSelectionFive}`)
+        } else if((i === 4) && (playRound(playerValue, computerSelectionFive) === (-1)) && (playerValue.toLowerCase() === "paper")) {
+            lineFive.innerText =(`You Lose! ${playerValue} is sliced apart by ${computerSelectionFive}`)
+        } else if((i === 4) && (playRound(playerValue, computerSelectionFive) === (-1)) && (playerValue.toLowerCase() === "scissors")) {
+            lineFive.innerText =(`You Lose! ${playerValue} are crushed by ${computerSelectionFive}`)
+        } else if((i === 4) && (playRound(playerValue, computerSelectionFive) === 0) && (playerValue.toLowerCase() === computerSelectionFive)) {
+            lineFive.innerText =(`You Tie!`);      
         //Overall Score
         } else if((i === 5) && (sum1 > 0)) {
-            console.log("You're the overall winner!");
+            lineSix.innerText = ("You're the overall winner!");
         } else if((i === 5) && (sum1 < 0)) {
-            console.log("You're the overall loser!");
+            lineSix.innerText = ("You're the overall loser!");
         } else if((i === 5) && (sum1 = 0)) {
-            console.log("Nobody Won!");
+            lineSix.innerText = ("Nobody Won!");
         } else {
-            console.log("Something went very wrong");
+            lineSix.innerText = ("Something went very wrong");
         }
     }
 }
 
-const array1 = [(playRound(playerSelection, computerSelection)),
-    (playRoundTwo(playerSelection, computerSelectionTwo)),
-    (playRoundThree(playerSelection, computerSelectionThree)),
-    (playRoundFour(playerSelection, computerSelectionTwo)),
-    (playRoundFive(playerSelection, computerSelectionFive))];
+const array1 = [(playRound(playerValue, computerSelection)),
+    (playRoundTwo(playerValue, computerSelectionTwo)),
+    (playRoundThree(playerValue, computerSelectionThree)),
+    (playRoundFour(playerValue, computerSelectionTwo)),
+    (playRoundFive(playerValue, computerSelectionFive))];
 
 const sum1 = (0 + (array1[0]) + (array1[1]) + (array1[2]) + (array1[3]) + (array1[4]));
 const sum2 = (1 + (-1) + (-2));
+
+console.log(game())
+}
+
+
+
+
+
+
+
+
 
 // if sum of array1 is > 0 you win
 // if sum of array1 is = 0 you tie
