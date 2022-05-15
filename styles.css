@@ -1,0 +1,56 @@
+
+.body {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 140px;
+    background-color: black;
+}
+
+.master {
+    border-style: solid;
+    border-color: black;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    background-color: white;
+}
+
+.header {
+    color: black;
+    font-family: Helvetica, sans-serif
+}
+
+.instructions {
+    margin: 0px;
+    padding: 0px;
+}
+
+.topblock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.bottomblock {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.lineSixHeader,
+.lineSix {
+    text-align: center;
+    font-size: 24px;
+
+}
+
+.lineOneHeader,
+.lineTwoHeader,
+.lineThreeHeader,
+.lineFourHeader,
+.lineFiveHeader,
+.lineSixHeader {
+    font-weight: 600;
+}

@@ -289,12 +289,14 @@ function game() {
         } else if((i === 5) && (sum1 > 0)) {
             lineSix.innerText = ("You're the overall winner!");
         } else if((i === 5) && (sum1 < 0)) {
-            lineSix.innerText = ("You're the overall loser!");
+            lineSix.innerText = ("You're the overall loser!")
         } else if((i === 5) && (sum1 = 0)) {
             lineSix.innerText = ("Nobody Won!");
         } else {
             lineSix.innerText = ("Something went very wrong");
         }
+       
+
     }
 }
 
@@ -317,7 +319,8 @@ console.log(game())
 
 
 
-
+/*if(lineSix.innerText = ("You're the overall loser!")) {
+    alert("gg ez")*/
 // if sum of array1 is > 0 you win
 // if sum of array1 is = 0 you tie
 // if sum of array1 is < 0 you lose
