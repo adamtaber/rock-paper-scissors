@@ -1,20 +1,20 @@
-let initiateGame = prompt("Do you want to play a game?");
+let gameStart = prompt("Do you want to play a game?");
 
 
-let myArray = [
+let computerRandom = [
     "rock",
     "paper",
     "scissors"
 ];
 
-function computerPlay() {
-    return myArray[Math.floor(Math.random()*myArray.length)];
+function getRandom() {
+    return computerRandom[Math.floor(Math.random()*computerRandom.length)];
 
 }
 
-function playerPlay() {
-    let test = prompt("enter rock, paper, or scissors");
-    return test.toLowerCase();
+function getPrompt() {
+    let playerInput = prompt("enter rock, paper, or scissors");
+    return playerInput.toLowerCase();
 }
 
 
@@ -22,8 +22,8 @@ let computerScore = 0;
 let playerScore = 0;
 
 function playRound() {
-    const computerSelection = computerPlay();
-    const playerSelection = playerPlay();
+    const computerSelection = getRandom();
+    const playerSelection = getPrompt();
     if(computerSelection === playerSelection) {
         alert(`It's a tie!`);
     }else if((playerSelection === "rock") && computerSelection === "scissors") {
@@ -41,7 +41,7 @@ function playRound() {
     }
 }
 
-function game() {
+function playGame() {
     for (let i = 0; i < 6; i++) {
         if(i===0) {
             playRound();
@@ -67,6 +67,6 @@ function game() {
     }
 }
 
-if(initiateGame = (0 || 1)) {
-    game();
+if(gameStart = (0 || 1)) {
+    playGame();
 }
