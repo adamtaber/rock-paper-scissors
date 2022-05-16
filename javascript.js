@@ -1,3 +1,6 @@
+let initiateGame = prompt("Do you want to play a game?");
+
+
 let myArray = [
     "rock",
     "paper",
@@ -9,55 +12,61 @@ function computerPlay() {
 
 }
 
+function playerPlay() {
+    let test = prompt("enter rock, paper, or scissors");
+    return test.toLowerCase();
+}
 
 
 let computerScore = 0;
 let playerScore = 0;
-let playerSelection = 'ROCK';
 
-
-function playRound(playerSelection) {
+function playRound() {
     const computerSelection = computerPlay();
-    prompt("enter rock, paper, or scissors")
-    if(computerSelection === (playerSelection.toLowerCase())) {
-        console.log(`It's a tie!`);
-    }else if((playerSelection.toLowerCase() === "rock") && computerSelection === "scissors") {
+    const playerSelection = playerPlay();
+    if(computerSelection === playerSelection) {
+        alert(`It's a tie!`);
+    }else if((playerSelection === "rock") && computerSelection === "scissors") {
         ++playerScore;
-        console.log(`You Win! ${playerSelection.toLowerCase()} beats ${computerSelection}`);
-    }else if((playerSelection.toLowerCase() === "paper") && computerSelection === "rock") {
+        alert(`You Win! ${playerSelection} beats ${computerSelection}`);
+    }else if((playerSelection === "paper") && computerSelection === "rock") {
         ++playerScore;
-        console.log(`You Win! ${playerSelection.toLowerCase()} beats ${computerSelection}`);    
-    }else if ((playerSelection.toLowerCase() === "scissors") && computerSelection === "paper") {
+        alert(`You Win! ${playerSelection} beats ${computerSelection}`);    
+    }else if ((playerSelection === "scissors") && computerSelection === "paper") {
         ++playerScore;
-        console.log(`You Win! ${playerSelection.toLowerCase()} beats ${computerSelection}`);    
+        alert(`You Win! ${playerSelection} beats ${computerSelection}`);    
     }else {
         ++computerScore;
-        console.log(`You Lose! ${computerSelection} beats ${playerSelection.toLowerCase()}`);
+        alert(`You Lose! ${computerSelection} beats ${playerSelection}`);
     }
 }
 
 function game() {
     for (let i = 0; i < 6; i++) {
         if(i===0) {
-            playRound(playerSelection);
+            playRound();
         }else if(i===1) {
-            playRound(playerSelection);
+            playRound();
         }else if(i===2) {
-            playRound(playerSelection);
+            playRound();
         }else if(i===3) {
-            playRound(playerSelection);
+            playRound();
         }else if(i===4) {
-            playRound(playerSelection);
+            playRound();
         }else if(i===5) {
             if(playerScore > computerScore) {
-                console.log("You're the overall winner!")
+                alert("You're the overall winner!")
             }else if(playerScore < computerScore) {
-                console.log("You're the overall loser!")
+                alert("You're the overall loser!")
             }else {
-                console.log("Overall, it's a tie!")
+                alert("Overall, it's a tie!")
             }
         }else {
-            console.log("invalid")
+            alert("invalid")
         }
     }
+}
+
+if(initiateGame = (0 || 1)) {
+    game();
 }
