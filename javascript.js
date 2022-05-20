@@ -24,7 +24,9 @@ let playerScore = 0;
 function playRound() {
     const computerSelection = getRandom();
     const playerSelection = getPrompt();
-    if(computerSelection === playerSelection) {
+    if(playerSelection !== ("rock" || "paper" || "scissors")) {
+        alert('Invalid response')
+    }else if(computerSelection === playerSelection) {
         alert(`It's a tie!`);
     }else if((playerSelection === "rock") && computerSelection === "scissors") {
         ++playerScore;
@@ -35,7 +37,7 @@ function playRound() {
     }else if ((playerSelection === "scissors") && computerSelection === "paper") {
         ++playerScore;
         alert(`You Win! ${playerSelection} beats ${computerSelection}`);    
-    }else {
+     }else {
         ++computerScore;
         alert(`You Lose! ${computerSelection} beats ${playerSelection}`);
     }
