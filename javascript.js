@@ -1,6 +1,3 @@
-let gameStart = prompt("Do you want to play a game?");
-
-
 let computerRandom = [
     "rock",
     "paper",
@@ -12,10 +9,17 @@ function getRandom() {
 
 }
 
-function getPrompt() {
-    let playerInput = prompt("enter rock, paper, or scissors");
-    return playerInput.toLowerCase();
-}
+let playerInput;
+
+const buttons = document.querySelectorAll('button');
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        playerInput = button.id;
+        console.log(playerInput);
+        playRound();
+        winAnnounce();
+    });
+});
 
 
 let computerScore = 0;
@@ -23,52 +27,48 @@ let playerScore = 0;
 
 function playRound() {
     const computerSelection = getRandom();
-    const playerSelection = getPrompt();
-    if(playerSelection !== ("rock" || "paper" || "scissors")) {
-        alert('Invalid response')
-    }else if(computerSelection === playerSelection) {
+    const playerSelection = playerInput;
+    if(computerSelection === playerInput) {
         alert(`It's a tie!`);
-    }else if((playerSelection === "rock") && computerSelection === "scissors") {
+    }else if((playerInput === "rock") && computerSelection === "scissors") {
         ++playerScore;
-        alert(`You Win! ${playerSelection} beats ${computerSelection}`);
+        alert(`You Win! ${playerInput} beats ${computerSelection}`);
     }else if((playerSelection === "paper") && computerSelection === "rock") {
         ++playerScore;
-        alert(`You Win! ${playerSelection} beats ${computerSelection}`);    
+        alert(`You Win! ${playerInput} beats ${computerSelection}`);    
     }else if ((playerSelection === "scissors") && computerSelection === "paper") {
         ++playerScore;
-        alert(`You Win! ${playerSelection} beats ${computerSelection}`);    
-     }else {
+        alert(`You Win! ${playerInput} beats ${computerSelection}`);    
+    }else {
         ++computerScore;
-        alert(`You Lose! ${computerSelection} beats ${playerSelection}`);
+        alert(`You Lose! ${computerSelection} beats ${playerInput}`);
     }
 }
 
-function playGame() {
-    for (let i = 0; i < 6; i++) {
-        if(i===0) {
-            playRound();
-        }else if(i===1) {
-            playRound();
-        }else if(i===2) {
-            playRound();
-        }else if(i===3) {
-            playRound();
-        }else if(i===4) {
-            playRound();
-        }else if(i===5) {
-            if(playerScore > computerScore) {
-                alert("You're the overall winner!")
-            }else if(playerScore < computerScore) {
-                alert("You're the overall loser!")
-            }else {
-                alert("Overall, it's a tie!")
-            }
-        }else {
-            alert("invalid")
+function winAnnounce() {
+    while(computerScore === 5 || playerScore === 5) {
+        if(computerScore === playerScore) {
+            document.getElementById('results').textContent = 
+            "GAME OVER: IT'S A TIE";
+            computerScore = 0;
+            playerScore = 0;
+            break;
+        }else if(computerScore > playerScore) {
+            document.getElementById('results').textContent =
+            "GAME OVER: YOU LOSE";
+            computerScore = 0;
+            playerScore = 0;
+            break;
+        }else if(playerScore > computerScore) {
+            document.getElementById('results').textContent =
+            "GAME OVER: YOU WIN!";
+            computerScore = 0;
+            playerScore = 0;
+            break;
         }
     }
 }
 
-if(gameStart = (0 || 1)) {
-    playGame();
-}
+// player hits r/p/s
+// when player hits button, playRound is run
+// once computerScore or playerScore hits 5, announce win/loss
