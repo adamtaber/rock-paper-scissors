@@ -1,56 +1,142 @@
+body {
+    overflow: hidden;
+    margin: 0;
+    height: 100vh;
+    font-family: Roboto, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+}
 
-.body {
+div#header {
     display: flex;
     justify-content: center;
-    align-content: center;
-    margin-top: 140px;
-    background-color: black;
+    margin: 0;
+    padding: 0;
 }
 
-.master {
-    border-style: solid;
-    border-color: black;
-    flex-direction: column;
+h1 {
+    font-size: 60px;
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
     align-items: center;
-    padding: 50px;
-    background-color: white;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
 }
 
-.header {
-    color: black;
-    font-family: Helvetica, sans-serif
+button {
+    width: 200px;
+    height: 200px;
+    font-size: 45px;
+    margin: 0;
+    cursor: pointer;
 }
 
-.instructions {
+#scores {
+    display: flex;
+    font-size: 45px;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    font-weight: 800;
+    margin: 0;
+    padding: 0;
+}
+
+.scoreTitles {
+    border-style: solid;
+    padding: 15px;
+    width: 250px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+#playerScore {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100px;
+}
+
+#computerScore {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100px;
+}
+
+#results {
+    font-size: 55px;
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 0;
+    height: 80px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 40vh;
+    overflow: auto;
+    text-align: center;
+    background-color: rgba(0,0,0,0.2)
+}
+
+.modal-content {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    background-color: #fefefe;
+    font-size: 50px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+    height: 15%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity: 0}
+    to {top:0; opacity: 1}
+}
+
+.playAgain {
+    height: 40px;
+    width: 120px;
+    font-size: 15px;
+    padding: 0px;
+    margin: 0px;
+}
+
+#resultsText {
     margin: 0px;
     padding: 0px;
-}
-
-.topblock {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 50px;
-}
-
-.bottomblock {
-    display: flex;
-    flex-direction: column;
-    
-}
-
-.lineSixHeader,
-.lineSix {
-    text-align: center;
-    font-size: 24px;
-
-}
-
-.lineOneHeader,
-.lineTwoHeader,
-.lineThreeHeader,
-.lineFourHeader,
-.lineFiveHeader,
-.lineSixHeader {
-    font-weight: 600;
 }

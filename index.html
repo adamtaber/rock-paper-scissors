@@ -4,15 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
     <script src= "javascript.js" defer></script>
 </head>
 <body>
-    <button id="rock">Rock</button>
-    <button id="paper">Paper</button>
-    <button id="scissors">Scissors</button>
-    <div id="playerScore"></div>
-    <div id="computerScore"></div>
+    <div id="header">
+        <h1>Rock Paper Scissors</h1>
+    </div>
+    <div id="buttons">
+        <button id="rock" class="inputBtn">Rock</button>
+        <button id="paper" class="inputBtn">Paper</button>
+        <button id="scissors" class="inputBtn">Scissors</button>
+    </div>
+    <div id="scores">
+        <div id="playerTitle">
+            <p class="scoreTitles">Player</p>
+            <div id="playerScore" class="scoretext"></div>
+        </div>
+        <div id="computerTitle">
+            <p class="scoreTitles">Computer</p>
+            <div id="computerScore" class="scoretext"></div>
+        </div>
+    </div>
     <div id="results"></div>
+    </div> 
+        <div id="modalOne" class="modal">
+            <div id="contentBox" class="modal-content">
+                <p id="resultsText"></p>
+                <button id="playAgainOne" class="playAgain">Play Again</button>
+            </div>
+        </div>
+    </div>
+    <div class="overlay" id="overlay"></div>
 </body>
 </html>
 
